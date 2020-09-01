@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="437a003a1ae343a2959b05c539180dd0" Name="Diagram1">
+        <EntityTypeShape EntityType="Oto_SatisModel.AracDonanım" Width="1.5" PointX="3" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.AracGenelBakis" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.AracKapasite" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.AracMotorPerformans" Width="1.5" PointX="3" PointY="14" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.AracYakıt" Width="1.5" PointX="3" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.Ilan" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Oto_SatisModel.Uye" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <AssociationConnector Association="Oto_SatisModel.FK_AracDonanım_Ilan" ManuallyRouted="false" />
+        <AssociationConnector Association="Oto_SatisModel.FK_AracGenelBakis_Ilan" ManuallyRouted="false" />
+        <AssociationConnector Association="Oto_SatisModel.FK_AracKapasite_Ilan" ManuallyRouted="false" />
+        <AssociationConnector Association="Oto_SatisModel.FK_AracMotorPerformans_Ilan" ManuallyRouted="false" />
+        <AssociationConnector Association="Oto_SatisModel.FK_AracYakıt_Ilan" ManuallyRouted="false" />
+        <AssociationConnector Association="Oto_SatisModel.FK_Uye_Ilan1" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

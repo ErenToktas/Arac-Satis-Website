@@ -1,0 +1,646 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Oto_SatisModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AracDonanım">
+          <Key>
+            <PropertyRef Name="DONANIMID" />
+          </Key>
+          <Property Name="DONANIMID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DONANIMIC" Type="char" MaxLength="1" />
+          <Property Name="DONANIMDIS" Type="char" MaxLength="1" />
+          <Property Name="DONANIMEGLENCE" Type="char" MaxLength="1" />
+          <Property Name="DONANIMGUVENLIK" Type="char" MaxLength="1" />
+          <Property Name="İLAN" Type="int" />
+        </EntityType>
+        <EntityType Name="AracGenelBakis">
+          <Key>
+            <PropertyRef Name="ARACID" />
+          </Key>
+          <Property Name="ARACID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ARACYIL" Type="char" MaxLength="4" />
+          <Property Name="ARACYAKITTIPI" Type="varchar" MaxLength="12" />
+          <Property Name="ARACVITESTIPI" Type="varchar" MaxLength="12" />
+          <Property Name="ARACKASATIPI" Type="varchar" MaxLength="20" />
+          <Property Name="ARACKM" Type="varchar" MaxLength="12" />
+          <Property Name="ARACTURU" Type="varchar" MaxLength="14" />
+          <Property Name="ARACRENK" Type="nvarchar" MaxLength="20" />
+          <Property Name="ARACPLAKAUYRUK" Type="nvarchar" MaxLength="35" />
+          <Property Name="ARACGARANTIDURUM" Type="varchar" MaxLength="3" />
+          <Property Name="ARACILKSAHIP" Type="varchar" MaxLength="18" />
+          <Property Name="ARACTAKAS" Type="varchar" MaxLength="4" />
+          <Property Name="ARACKIMDEN" Type="varchar" MaxLength="16" />
+          <Property Name="ARACYILLIKMTV" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ARACSANZIMAN" Type="varchar" MaxLength="12" />
+          <Property Name="İLAN" Type="int" />
+        </EntityType>
+        <EntityType Name="AracKapasite">
+          <Key>
+            <PropertyRef Name="ARACKAPASITEID" />
+          </Key>
+          <Property Name="ARACKAPASITEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ARACUZUNLUK" Type="int" />
+          <Property Name="ARACGENISLIK" Type="int" />
+          <Property Name="ARACYUKSEKLIK" Type="int" />
+          <Property Name="ARACAGIRLIK" Type="int" />
+          <Property Name="ARACBOSAGIRLIK" Type="int" />
+          <Property Name="ARACKOLTUKSAYISI" Type="int" />
+          <Property Name="ARACBAGAJHACIM" Type="int" />
+          <Property Name="ARACAKSARALIK" Type="int" />
+          <Property Name="ILAN" Type="int" />
+        </EntityType>
+        <EntityType Name="AracMotorPerformans">
+          <Key>
+            <PropertyRef Name="ARACPERFORMANSID" />
+          </Key>
+          <Property Name="ARACPERFORMANSID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ARACCEKIS" Type="varchar" MaxLength="13" />
+          <Property Name="ARACSILINDIR" Type="char" MaxLength="1" />
+          <Property Name="ARACTORK" Type="int" />
+          <Property Name="ARACMOTORHACIM" Type="int" />
+          <Property Name="ARACMOTORGUC" Type="int" />
+          <Property Name="ARACMAXGUC" Type="int" />
+          <Property Name="ARACMINGUC" Type="int" />
+          <Property Name="ARACHIZLANMA" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="ARACMAXHIZ" Type="int" />
+          <Property Name="ILAN" Type="int" />
+        </EntityType>
+        <EntityType Name="AracYakıt">
+          <Key>
+            <PropertyRef Name="ARACYAKITID" />
+          </Key>
+          <Property Name="ARACYAKITID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ARACORTYAKIT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ARACSEHIRICIYAKIT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ARACSEHIRDISIYAKIT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ARACYAKITDEPO" Type="int" />
+          <Property Name="ILAN" Type="int" />
+        </EntityType>
+        <EntityType Name="Ilan">
+          <Key>
+            <PropertyRef Name="ILANID" />
+          </Key>
+          <Property Name="ILANID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ILANFIYAT" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="ILANADRES" Type="nvarchar" MaxLength="50" />
+          <Property Name="ILANNO" Type="char" MaxLength="10" />
+          <Property Name="ILANTARIH" Type="datetime" />
+          <Property Name="ILANMARKA" Type="varchar" MaxLength="16" />
+          <Property Name="ILANSERI" Type="varchar" MaxLength="16" />
+          <Property Name="İLANMODEL" Type="varchar" MaxLength="16" />
+          <Property Name="ILANARACYIL" Type="char" MaxLength="4" />
+          <Property Name="ILANYAKITTIPI" Type="varchar" MaxLength="12" />
+          <Property Name="ILANVITESTIPI" Type="varchar" MaxLength="14" />
+          <Property Name="ILANMOTORHACIM" Type="varchar" MaxLength="7" />
+          <Property Name="ILANMOTORGUCU" Type="varchar" MaxLength="6" />
+          <Property Name="ILANKM" Type="varchar" MaxLength="12" />
+          <Property Name="ILANBOYADEGISEN" Type="varchar" MaxLength="25" />
+          <Property Name="ILANTAKASDURUM" Type="varchar" MaxLength="5" />
+          <Property Name="ILANKIMDEN" Type="varchar" MaxLength="9" />
+          <Property Name="ILANARACGORSEL" Type="varchar" MaxLength="250" />
+          <Property Name="ILANBASLIKACIKLAMA" Type="nvarchar" MaxLength="50" />
+          <Property Name="ILANDURUM" Type="bit" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Uye">
+          <Key>
+            <PropertyRef Name="UYEID" />
+          </Key>
+          <Property Name="UYEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UYEAD" Type="varchar" MaxLength="20" />
+          <Property Name="UYESOYAD" Type="varchar" MaxLength="15" />
+          <Property Name="UYETELEFON" Type="varchar" MaxLength="20" />
+          <Property Name="UYEMAIL" Type="varchar" MaxLength="30" />
+          <Property Name="UYESIFRE" Type="nvarchar" MaxLength="15" />
+          <Property Name="UYEADRES" Type="nvarchar" MaxLength="300" />
+          <Property Name="UYELIKTARIH" Type="datetime" />
+          <Property Name="UYEILANHAKKI" Type="int" />
+          <Property Name="ILAN" Type="int" />
+        </EntityType>
+        <Association Name="FK_AracDonanım_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracDonanım" Type="Self.AracDonanım" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracDonanım">
+              <PropertyRef Name="İLAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracGenelBakis_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracGenelBakis" Type="Self.AracGenelBakis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracGenelBakis">
+              <PropertyRef Name="İLAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracKapasite_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracKapasite" Type="Self.AracKapasite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracKapasite">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracMotorPerformans_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracMotorPerformans" Type="Self.AracMotorPerformans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracMotorPerformans">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracYakıt_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracYakıt" Type="Self.AracYakıt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracYakıt">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uye_Ilan1">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="Uye" Type="Self.Uye" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="Uye">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Oto_SatisModelStoreContainer">
+          <EntitySet Name="AracDonanım" EntityType="Self.AracDonanım" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AracGenelBakis" EntityType="Self.AracGenelBakis" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AracKapasite" EntityType="Self.AracKapasite" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AracMotorPerformans" EntityType="Self.AracMotorPerformans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AracYakıt" EntityType="Self.AracYakıt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ilan" EntityType="Self.Ilan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Uye" EntityType="Self.Uye" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AracDonanım_Ilan" Association="Self.FK_AracDonanım_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracDonanım" EntitySet="AracDonanım" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracGenelBakis_Ilan" Association="Self.FK_AracGenelBakis_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracGenelBakis" EntitySet="AracGenelBakis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracKapasite_Ilan" Association="Self.FK_AracKapasite_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracKapasite" EntitySet="AracKapasite" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracMotorPerformans_Ilan" Association="Self.FK_AracMotorPerformans_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracMotorPerformans" EntitySet="AracMotorPerformans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracYakıt_Ilan" Association="Self.FK_AracYakıt_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracYakıt" EntitySet="AracYakıt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uye_Ilan1" Association="Self.FK_Uye_Ilan1">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="Uye" EntitySet="Uye" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Oto_SatisModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AracDonanım">
+          <Key>
+            <PropertyRef Name="DONANIMID" />
+          </Key>
+          <Property Name="DONANIMID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DONANIMIC" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DONANIMDIS" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DONANIMEGLENCE" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DONANIMGUVENLIK" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="İLAN" Type="Int32" />
+          <NavigationProperty Name="Ilan" Relationship="Self.FK_AracDonanım_Ilan" FromRole="AracDonanım" ToRole="Ilan" />
+        </EntityType>
+        <EntityType Name="AracGenelBakis">
+          <Key>
+            <PropertyRef Name="ARACID" />
+          </Key>
+          <Property Name="ARACID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ARACYIL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ARACYAKITTIPI" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ARACVITESTIPI" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ARACKASATIPI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ARACKM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ARACTURU" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="ARACRENK" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ARACPLAKAUYRUK" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="ARACGARANTIDURUM" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="ARACILKSAHIP" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="ARACTAKAS" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="ARACKIMDEN" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ARACYILLIKMTV" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ARACSANZIMAN" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="İLAN" Type="Int32" />
+          <NavigationProperty Name="Ilan" Relationship="Self.FK_AracGenelBakis_Ilan" FromRole="AracGenelBakis" ToRole="Ilan" />
+        </EntityType>
+        <EntityType Name="AracKapasite">
+          <Key>
+            <PropertyRef Name="ARACKAPASITEID" />
+          </Key>
+          <Property Name="ARACKAPASITEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ARACUZUNLUK" Type="Int32" />
+          <Property Name="ARACGENISLIK" Type="Int32" />
+          <Property Name="ARACYUKSEKLIK" Type="Int32" />
+          <Property Name="ARACAGIRLIK" Type="Int32" />
+          <Property Name="ARACBOSAGIRLIK" Type="Int32" />
+          <Property Name="ARACKOLTUKSAYISI" Type="Int32" />
+          <Property Name="ARACBAGAJHACIM" Type="Int32" />
+          <Property Name="ARACAKSARALIK" Type="Int32" />
+          <Property Name="ILAN" Type="Int32" />
+          <NavigationProperty Name="Ilan1" Relationship="Self.FK_AracKapasite_Ilan" FromRole="AracKapasite" ToRole="Ilan" />
+        </EntityType>
+        <EntityType Name="AracMotorPerformans">
+          <Key>
+            <PropertyRef Name="ARACPERFORMANSID" />
+          </Key>
+          <Property Name="ARACPERFORMANSID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ARACCEKIS" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="ARACSILINDIR" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ARACTORK" Type="Int32" />
+          <Property Name="ARACMOTORHACIM" Type="Int32" />
+          <Property Name="ARACMOTORGUC" Type="Int32" />
+          <Property Name="ARACMAXGUC" Type="Int32" />
+          <Property Name="ARACMINGUC" Type="Int32" />
+          <Property Name="ARACHIZLANMA" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="ARACMAXHIZ" Type="Int32" />
+          <Property Name="ILAN" Type="Int32" />
+          <NavigationProperty Name="Ilan1" Relationship="Self.FK_AracMotorPerformans_Ilan" FromRole="AracMotorPerformans" ToRole="Ilan" />
+        </EntityType>
+        <EntityType Name="AracYakıt">
+          <Key>
+            <PropertyRef Name="ARACYAKITID" />
+          </Key>
+          <Property Name="ARACYAKITID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ARACORTYAKIT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ARACSEHIRICIYAKIT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ARACSEHIRDISIYAKIT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ARACYAKITDEPO" Type="Int32" />
+          <Property Name="ILAN" Type="Int32" />
+          <NavigationProperty Name="Ilan1" Relationship="Self.FK_AracYakıt_Ilan" FromRole="AracYakıt" ToRole="Ilan" />
+        </EntityType>
+        <EntityType Name="Ilan">
+          <Key>
+            <PropertyRef Name="ILANID" />
+          </Key>
+          <Property Name="ILANID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ILANFIYAT" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="ILANADRES" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ILANNO" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ILANTARIH" Type="DateTime" Precision="3" />
+          <Property Name="ILANMARKA" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ILANSERI" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="İLANMODEL" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ILANARACYIL" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="ILANYAKITTIPI" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ILANVITESTIPI" Type="String" MaxLength="14" FixedLength="false" Unicode="false" />
+          <Property Name="ILANMOTORHACIM" Type="String" MaxLength="7" FixedLength="false" Unicode="false" />
+          <Property Name="ILANMOTORGUCU" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="ILANKM" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="ILANBOYADEGISEN" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="ILANTAKASDURUM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="ILANKIMDEN" Type="String" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="ILANARACGORSEL" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="ILANBASLIKACIKLAMA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ILANDURUM" Type="Boolean" />
+          <NavigationProperty Name="AracDonanım" Relationship="Self.FK_AracDonanım_Ilan" FromRole="Ilan" ToRole="AracDonanım" />
+          <NavigationProperty Name="AracGenelBakis" Relationship="Self.FK_AracGenelBakis_Ilan" FromRole="Ilan" ToRole="AracGenelBakis" />
+          <NavigationProperty Name="AracKapasite" Relationship="Self.FK_AracKapasite_Ilan" FromRole="Ilan" ToRole="AracKapasite" />
+          <NavigationProperty Name="AracMotorPerformans" Relationship="Self.FK_AracMotorPerformans_Ilan" FromRole="Ilan" ToRole="AracMotorPerformans" />
+          <NavigationProperty Name="AracYakıt" Relationship="Self.FK_AracYakıt_Ilan" FromRole="Ilan" ToRole="AracYakıt" />
+          <NavigationProperty Name="Uye" Relationship="Self.FK_Uye_Ilan1" FromRole="Ilan" ToRole="Uye" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Uye">
+          <Key>
+            <PropertyRef Name="UYEID" />
+          </Key>
+          <Property Name="UYEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UYEAD" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UYESOYAD" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="UYETELEFON" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UYEMAIL" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="UYESIFRE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="UYEADRES" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="UYELIKTARIH" Type="DateTime" Precision="3" />
+          <Property Name="UYEILANHAKKI" Type="Int32" />
+          <Property Name="ILAN" Type="Int32" />
+          <NavigationProperty Name="Ilan1" Relationship="Self.FK_Uye_Ilan1" FromRole="Uye" ToRole="Ilan" />
+        </EntityType>
+        <Association Name="FK_AracDonanım_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracDonanım" Type="Self.AracDonanım" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracDonanım">
+              <PropertyRef Name="İLAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracGenelBakis_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracGenelBakis" Type="Self.AracGenelBakis" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracGenelBakis">
+              <PropertyRef Name="İLAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracKapasite_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracKapasite" Type="Self.AracKapasite" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracKapasite">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracMotorPerformans_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracMotorPerformans" Type="Self.AracMotorPerformans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracMotorPerformans">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AracYakıt_Ilan">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="AracYakıt" Type="Self.AracYakıt" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="AracYakıt">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Uye_Ilan1">
+          <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1" />
+          <End Role="Uye" Type="Self.Uye" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ilan">
+              <PropertyRef Name="ILANID" />
+            </Principal>
+            <Dependent Role="Uye">
+              <PropertyRef Name="ILAN" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Oto_SatisEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AracDonanım" EntityType="Self.AracDonanım" />
+          <EntitySet Name="AracGenelBakis" EntityType="Self.AracGenelBakis" />
+          <EntitySet Name="AracKapasite" EntityType="Self.AracKapasite" />
+          <EntitySet Name="AracMotorPerformans" EntityType="Self.AracMotorPerformans" />
+          <EntitySet Name="AracYakıt" EntityType="Self.AracYakıt" />
+          <EntitySet Name="Ilan" EntityType="Self.Ilan" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Uye" EntityType="Self.Uye" />
+          <AssociationSet Name="FK_AracDonanım_Ilan" Association="Self.FK_AracDonanım_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracDonanım" EntitySet="AracDonanım" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracGenelBakis_Ilan" Association="Self.FK_AracGenelBakis_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracGenelBakis" EntitySet="AracGenelBakis" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracKapasite_Ilan" Association="Self.FK_AracKapasite_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracKapasite" EntitySet="AracKapasite" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracMotorPerformans_Ilan" Association="Self.FK_AracMotorPerformans_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracMotorPerformans" EntitySet="AracMotorPerformans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AracYakıt_Ilan" Association="Self.FK_AracYakıt_Ilan">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="AracYakıt" EntitySet="AracYakıt" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Uye_Ilan1" Association="Self.FK_Uye_Ilan1">
+            <End Role="Ilan" EntitySet="Ilan" />
+            <End Role="Uye" EntitySet="Uye" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Oto_SatisModelStoreContainer" CdmEntityContainer="Oto_SatisEntities">
+          <EntitySetMapping Name="AracDonanım">
+            <EntityTypeMapping TypeName="Oto_SatisModel.AracDonanım">
+              <MappingFragment StoreEntitySet="AracDonanım">
+                <ScalarProperty Name="DONANIMID" ColumnName="DONANIMID" />
+                <ScalarProperty Name="DONANIMIC" ColumnName="DONANIMIC" />
+                <ScalarProperty Name="DONANIMDIS" ColumnName="DONANIMDIS" />
+                <ScalarProperty Name="DONANIMEGLENCE" ColumnName="DONANIMEGLENCE" />
+                <ScalarProperty Name="DONANIMGUVENLIK" ColumnName="DONANIMGUVENLIK" />
+                <ScalarProperty Name="İLAN" ColumnName="İLAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AracGenelBakis">
+            <EntityTypeMapping TypeName="Oto_SatisModel.AracGenelBakis">
+              <MappingFragment StoreEntitySet="AracGenelBakis">
+                <ScalarProperty Name="ARACID" ColumnName="ARACID" />
+                <ScalarProperty Name="ARACYIL" ColumnName="ARACYIL" />
+                <ScalarProperty Name="ARACYAKITTIPI" ColumnName="ARACYAKITTIPI" />
+                <ScalarProperty Name="ARACVITESTIPI" ColumnName="ARACVITESTIPI" />
+                <ScalarProperty Name="ARACKASATIPI" ColumnName="ARACKASATIPI" />
+                <ScalarProperty Name="ARACKM" ColumnName="ARACKM" />
+                <ScalarProperty Name="ARACTURU" ColumnName="ARACTURU" />
+                <ScalarProperty Name="ARACRENK" ColumnName="ARACRENK" />
+                <ScalarProperty Name="ARACPLAKAUYRUK" ColumnName="ARACPLAKAUYRUK" />
+                <ScalarProperty Name="ARACGARANTIDURUM" ColumnName="ARACGARANTIDURUM" />
+                <ScalarProperty Name="ARACILKSAHIP" ColumnName="ARACILKSAHIP" />
+                <ScalarProperty Name="ARACTAKAS" ColumnName="ARACTAKAS" />
+                <ScalarProperty Name="ARACKIMDEN" ColumnName="ARACKIMDEN" />
+                <ScalarProperty Name="ARACYILLIKMTV" ColumnName="ARACYILLIKMTV" />
+                <ScalarProperty Name="ARACSANZIMAN" ColumnName="ARACSANZIMAN" />
+                <ScalarProperty Name="İLAN" ColumnName="İLAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AracKapasite">
+            <EntityTypeMapping TypeName="Oto_SatisModel.AracKapasite">
+              <MappingFragment StoreEntitySet="AracKapasite">
+                <ScalarProperty Name="ARACKAPASITEID" ColumnName="ARACKAPASITEID" />
+                <ScalarProperty Name="ARACUZUNLUK" ColumnName="ARACUZUNLUK" />
+                <ScalarProperty Name="ARACGENISLIK" ColumnName="ARACGENISLIK" />
+                <ScalarProperty Name="ARACYUKSEKLIK" ColumnName="ARACYUKSEKLIK" />
+                <ScalarProperty Name="ARACAGIRLIK" ColumnName="ARACAGIRLIK" />
+                <ScalarProperty Name="ARACBOSAGIRLIK" ColumnName="ARACBOSAGIRLIK" />
+                <ScalarProperty Name="ARACKOLTUKSAYISI" ColumnName="ARACKOLTUKSAYISI" />
+                <ScalarProperty Name="ARACBAGAJHACIM" ColumnName="ARACBAGAJHACIM" />
+                <ScalarProperty Name="ARACAKSARALIK" ColumnName="ARACAKSARALIK" />
+                <ScalarProperty Name="ILAN" ColumnName="ILAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AracMotorPerformans">
+            <EntityTypeMapping TypeName="Oto_SatisModel.AracMotorPerformans">
+              <MappingFragment StoreEntitySet="AracMotorPerformans">
+                <ScalarProperty Name="ARACPERFORMANSID" ColumnName="ARACPERFORMANSID" />
+                <ScalarProperty Name="ARACCEKIS" ColumnName="ARACCEKIS" />
+                <ScalarProperty Name="ARACSILINDIR" ColumnName="ARACSILINDIR" />
+                <ScalarProperty Name="ARACTORK" ColumnName="ARACTORK" />
+                <ScalarProperty Name="ARACMOTORHACIM" ColumnName="ARACMOTORHACIM" />
+                <ScalarProperty Name="ARACMOTORGUC" ColumnName="ARACMOTORGUC" />
+                <ScalarProperty Name="ARACMAXGUC" ColumnName="ARACMAXGUC" />
+                <ScalarProperty Name="ARACMINGUC" ColumnName="ARACMINGUC" />
+                <ScalarProperty Name="ARACHIZLANMA" ColumnName="ARACHIZLANMA" />
+                <ScalarProperty Name="ARACMAXHIZ" ColumnName="ARACMAXHIZ" />
+                <ScalarProperty Name="ILAN" ColumnName="ILAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AracYakıt">
+            <EntityTypeMapping TypeName="Oto_SatisModel.AracYakıt">
+              <MappingFragment StoreEntitySet="AracYakıt">
+                <ScalarProperty Name="ARACYAKITID" ColumnName="ARACYAKITID" />
+                <ScalarProperty Name="ARACORTYAKIT" ColumnName="ARACORTYAKIT" />
+                <ScalarProperty Name="ARACSEHIRICIYAKIT" ColumnName="ARACSEHIRICIYAKIT" />
+                <ScalarProperty Name="ARACSEHIRDISIYAKIT" ColumnName="ARACSEHIRDISIYAKIT" />
+                <ScalarProperty Name="ARACYAKITDEPO" ColumnName="ARACYAKITDEPO" />
+                <ScalarProperty Name="ILAN" ColumnName="ILAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ilan">
+            <EntityTypeMapping TypeName="Oto_SatisModel.Ilan">
+              <MappingFragment StoreEntitySet="Ilan">
+                <ScalarProperty Name="ILANID" ColumnName="ILANID" />
+                <ScalarProperty Name="ILANFIYAT" ColumnName="ILANFIYAT" />
+                <ScalarProperty Name="ILANADRES" ColumnName="ILANADRES" />
+                <ScalarProperty Name="ILANNO" ColumnName="ILANNO" />
+                <ScalarProperty Name="ILANTARIH" ColumnName="ILANTARIH" />
+                <ScalarProperty Name="ILANMARKA" ColumnName="ILANMARKA" />
+                <ScalarProperty Name="ILANSERI" ColumnName="ILANSERI" />
+                <ScalarProperty Name="İLANMODEL" ColumnName="İLANMODEL" />
+                <ScalarProperty Name="ILANARACYIL" ColumnName="ILANARACYIL" />
+                <ScalarProperty Name="ILANYAKITTIPI" ColumnName="ILANYAKITTIPI" />
+                <ScalarProperty Name="ILANVITESTIPI" ColumnName="ILANVITESTIPI" />
+                <ScalarProperty Name="ILANMOTORHACIM" ColumnName="ILANMOTORHACIM" />
+                <ScalarProperty Name="ILANMOTORGUCU" ColumnName="ILANMOTORGUCU" />
+                <ScalarProperty Name="ILANKM" ColumnName="ILANKM" />
+                <ScalarProperty Name="ILANBOYADEGISEN" ColumnName="ILANBOYADEGISEN" />
+                <ScalarProperty Name="ILANTAKASDURUM" ColumnName="ILANTAKASDURUM" />
+                <ScalarProperty Name="ILANKIMDEN" ColumnName="ILANKIMDEN" />
+                <ScalarProperty Name="ILANARACGORSEL" ColumnName="ILANARACGORSEL" />
+                <ScalarProperty Name="ILANBASLIKACIKLAMA" ColumnName="ILANBASLIKACIKLAMA" />
+                <ScalarProperty Name="ILANDURUM" ColumnName="ILANDURUM" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="Oto_SatisModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uye">
+            <EntityTypeMapping TypeName="Oto_SatisModel.Uye">
+              <MappingFragment StoreEntitySet="Uye">
+                <ScalarProperty Name="UYEID" ColumnName="UYEID" />
+                <ScalarProperty Name="UYEAD" ColumnName="UYEAD" />
+                <ScalarProperty Name="UYESOYAD" ColumnName="UYESOYAD" />
+                <ScalarProperty Name="UYETELEFON" ColumnName="UYETELEFON" />
+                <ScalarProperty Name="UYEMAIL" ColumnName="UYEMAIL" />
+                <ScalarProperty Name="UYESIFRE" ColumnName="UYESIFRE" />
+                <ScalarProperty Name="UYEADRES" ColumnName="UYEADRES" />
+                <ScalarProperty Name="UYELIKTARIH" ColumnName="UYELIKTARIH" />
+                <ScalarProperty Name="UYEILANHAKKI" ColumnName="UYEILANHAKKI" />
+                <ScalarProperty Name="ILAN" ColumnName="ILAN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
