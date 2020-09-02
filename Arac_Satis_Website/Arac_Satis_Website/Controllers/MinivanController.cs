@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using Arac_Satis_Website.Models.entity;
 namespace Arac_Satis_Website.Controllers
 {
-    public class AnasayfaController : Controller
+    public class MinivanController : Controller
     {
-        // GET: Anasayfa
+        // GET: Minivan
         Oto_SatisEntities db = new Oto_SatisEntities();
         public ActionResult Index()
         {
