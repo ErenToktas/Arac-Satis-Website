@@ -181,8 +181,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Design\index.html" />
-    <Content Include="Design\Style.css" />
+    <Content Include="Message_Page_Design\index.html" />
+    <Content Include="Message_Page_Design\Style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -193,6 +193,8 @@
     <Content Include="images\logo2.png" />
     <Content Include="images\logo3.png" />
     <Content Include="images\logo4.png" />
+    <Content Include="Message_Page_Design_2\index2.html" />
+    <Content Include="Message_Page_Design_2\Style2.css" />
     <Content Include="Models\entity\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

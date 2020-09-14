@@ -1,0 +1,92 @@
+﻿@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+}
+
+*:focus {
+        outline: 0;
+ }
+
+
+html,
+body {
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.chat {
+    height: 100%;
+    display: flex;
+}
+
+.chat .sidebar {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    min-width: 400px;
+    background: #e7e4e4;
+    margin: 70px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.chat .sidebar .sidebar-header {
+    height: 50px;
+    min-height: 50px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px 0 15px; 
+}
+
+.chat .sidebar .sidebar-header .user-image {
+    display: flex;
+    align-items: center;
+}
+
+.chat .sidebar .sidebar-header .user-image img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+.chat .sidebar .sidebar-header .actions ul {
+    display: flex;
+}
+
+.chat .sidebar .sidebar-header .actions ul li {
+    margin-left: 30px;
+}
+
+.chat .sidebar .sidebar-header .actions ul li a {
+    font-size: 20px;
+    color: #999;
+    width: 20px;
+    display: block;
+    text-align: center;
+}
+
+.chat .content .message-header .actions ul li a:hover {
+    color: #222;
+}
+
+.chat .sidebar .search {
+    display: flex;
+    height: 40px;
+    min-height: 50px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    padding: 0 15px;
+    align-items: center;
+}
+
+.chat .sidebar .search i {
+    position: absolute;
+}
